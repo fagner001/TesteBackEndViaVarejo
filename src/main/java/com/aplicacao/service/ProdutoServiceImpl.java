@@ -16,11 +16,11 @@ public class ProdutoServiceImpl implements ProdutoService{
 	public List<Parcela> getListaDeParcela(Double valorProduto, CondicaoPagamento condicaoPagamento) throws Exception{
 		List<Parcela> listaDeParcela = new ArrayList<Parcela>();
 
-		for(int i=1; i<=condicaoPagamento.getQtdParcelas(); i++){
+		for(int i=1; i<=condicaoPagamento.getQtdeParcelas(); i++){
 			Parcela parcela = new Parcela();
 			parcela.setNumeroParcela(i);
-			parcela.setTaxaJurosAoMes(condicaoPagamento.getQtdParcelas().intValue() > 6 ? TAXA_JUROS_SELIC_MES : 0.0);
-			parcela.setValor((valorProduto - condicaoPagamento.getValorEntrada())/condicaoPagamento.getQtdParcelas());
+			parcela.setTaxaJurosAoMes(condicaoPagamento.getQtdeParcelas().intValue() > 6 ? TAXA_JUROS_SELIC_MES : 0.0);
+			parcela.setValor((valorProduto - condicaoPagamento.getValorEntrada())/condicaoPagamento.getQtdeParcelas());
 
 			listaDeParcela.add(parcela);
 

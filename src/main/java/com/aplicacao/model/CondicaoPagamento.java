@@ -6,7 +6,7 @@ public class CondicaoPagamento implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private Double valorEntrada;
-	private Integer qtdParcelas;
+	private Integer qtdeParcelas;
 
 	public Double getValorEntrada() {
 		return valorEntrada;
@@ -14,11 +14,11 @@ public class CondicaoPagamento implements Serializable {
 	public void setValorEntrada(Double valorEntrada) {
 		this.valorEntrada = valorEntrada;
 	}
-	public Integer getQtdParcelas() {
-		return qtdParcelas;
+	public Integer getQtdeParcelas() {
+		return qtdeParcelas;
 	}
-	public void setQtdParcelas(Integer qtdParcelas) {
-		this.qtdParcelas = qtdParcelas;
+	public void setQtdParcelas(Integer qtdeParcelas) {
+		this.qtdeParcelas = qtdeParcelas;
 	}
 
 
